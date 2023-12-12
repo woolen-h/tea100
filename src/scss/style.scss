@@ -1,0 +1,117 @@
+$theme-01-hex: #668C3F;
+$theme-02-hex: #728C58;
+$theme-03-hex: #93A680;
+$theme-04-hex: #B4BFA3;
+$theme-05-hex: #F2EAE4;
+$white: #fff;
+$black: #333;
+$accent-01: #A68880;
+$accent-02: #8087A6;
+$accent-03: #A180A6;
+
+.container {
+    background-color: $theme-05-hex;
+}
+
+.description {
+    font-size: .8rem;
+    font-weight: 300;
+    
+    .arrow {
+        i {
+            position: relative;
+            top: 2px;
+        }
+    }
+}
+.accent {
+    color: $accent-01;
+}
+// header
+header {
+    width: 100%;
+    padding: 1.5rem 0;
+
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 5.5rem;
+        background-color: $white;
+        z-index: -1;
+    }
+    
+    .hamburger-menu {
+        color: $black;
+        font-size: 20px;
+    }
+    .profile {
+        font-size: .8rem;
+
+        .profile-pic {
+            width: 3rem;
+            height: 3rem;
+            background-color: $theme-05-hex;
+            border-radius: 50%;
+            color: #333;
+            overflow: hidden;
+
+            img {
+                object-fit: contain;
+                position: relative;
+                top: 5px;
+            }
+            .default-profile {
+                top: 0;
+                transform: scale(.5);
+            }
+        }
+    }
+}
+// menu
+.menu-bar {
+    line-height: 1;
+
+    &.num01 {
+        background-color: $white;
+        padding: 1.5rem 2rem;
+    }
+    &.num02 {
+        background-color: $black;
+        color: $white;
+        padding: 1rem 2rem;
+    }
+    &.num03 {
+        font-size: .9rem;
+
+        li {
+            a {
+                display: inline-block;
+                padding: 1rem;
+                border: 1px solid $black;
+                border-radius: .5rem;
+            }
+        }
+    }
+    .menu-detail {
+        width: 100%;
+        padding: .5rem 1rem .7rem;
+    }
+}
+// lnb
+.lnb {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 30%;
+    height: 100%;
+    background-color: #fff;
+    padding: 3rem 1rem;
+    
+    li {
+        padding: .5rem 0;
+    }
+}
