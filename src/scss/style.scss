@@ -5,9 +5,15 @@ $theme-04-hex: #B4BFA3;
 $theme-05-hex: #F2EAE4;
 $white: #fff;
 $black: #333;
+$black-01: rgba(#333, .1);
+$black-02: rgba(#333, .2);
+$black-03: rgba(#333, .3);
+$black-04: rgba(#333, .4);
+$black-05: rgba(#333, .5);
 $accent-01: #A68880;
 $accent-02: #8087A6;
 $accent-03: #A180A6;
+$accent-04: #738FFF;
 
 .container {
     background-color: $theme-05-hex;
@@ -26,6 +32,15 @@ $accent-03: #A180A6;
 }
 .accent {
     color: $accent-01;
+}
+.dot {
+    &::after {
+        position: relative;
+        top: -7px;
+        left: 2px;
+        content: '*';
+        color: $accent-04;
+    }
 }
 // header
 header {
@@ -99,6 +114,10 @@ header {
     .menu-detail {
         width: 100%;
         padding: .5rem 1rem .7rem;
+
+        &:only-child {
+            padding: .5rem 0;
+        }
     }
 }
 // lnb
@@ -113,5 +132,30 @@ header {
     
     li {
         padding: .5rem 0;
+    }
+}
+
+// table
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border-radius: .5rem;
+    overflow: hidden;
+    tr {
+        th, td {padding: .5rem 1rem;}
+        th {
+            background-color: rgba($theme-04-hex, .8);
+            border: 1px solid $theme-04-hex;
+            border-bottom-color: $black-01;
+        }
+        td {
+            border: 1px solid $theme-04-hex;
+            border-radius: .5rem;
+        }
+        &:last-child {
+            th {
+                border-bottom-color: $theme-04-hex;
+            }
+        }
     }
 }
