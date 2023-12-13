@@ -1,8 +1,9 @@
-$theme-01-hex: #668C3F;
-$theme-02-hex: #728C58;
-$theme-03-hex: #93A680;
-$theme-04-hex: #B4BFA3;
-$theme-05-hex: #F2EAE4;
+$theme-01-hex: #758650;
+$theme-02-hex: #B5C267;
+$theme-03-hex: #FFE27C;
+$theme-04-hex: #E8B634;
+$theme-05-hex: #F8F9F8;
+$theme-06-hex: #C9B6A1;
 $white: #fff;
 $black: #333;
 $black-01: rgba(#333, .1);
@@ -10,13 +11,13 @@ $black-02: rgba(#333, .2);
 $black-03: rgba(#333, .3);
 $black-04: rgba(#333, .4);
 $black-05: rgba(#333, .5);
-$accent-01: #A68880;
-$accent-02: #8087A6;
-$accent-03: #A180A6;
-$accent-04: #738FFF;
+$accent-01: #7DB2FF;
+$accent-02: #FF7D7E;
+$accent-03: #CFFF66;
+$accent-04: #4A7487;
 
 .container {
-    background-color: $theme-05-hex;
+    background-color: rgba($theme-06-hex, .2);
 }
 
 .description {
@@ -39,7 +40,7 @@ $accent-04: #738FFF;
         top: -7px;
         left: 2px;
         content: '*';
-        color: $accent-04;
+        color: $accent-02;
     }
 }
 // header
@@ -132,6 +133,9 @@ header {
     
     li {
         padding: .5rem 0;
+        a {
+            padding: .5rem 0;
+        }
     }
 }
 
@@ -144,17 +148,16 @@ table {
     tr {
         th, td {padding: .5rem 1rem;}
         th {
-            background-color: rgba($theme-04-hex, .8);
-            border: 1px solid $theme-04-hex;
-            border-bottom-color: $black-01;
+            background-color: $black-01;
+            border: 1px solid $black-02;
         }
         td {
-            border: 1px solid $theme-04-hex;
+            border: 1px solid $black-02;
             border-radius: .5rem;
         }
         &:last-child {
             th {
-                border-bottom-color: $theme-04-hex;
+                border-bottom-color: $black-03;
             }
         }
     }

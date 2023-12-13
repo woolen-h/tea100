@@ -48,8 +48,8 @@
                             <img class="default-profile" src="./src/img/profile-default.svg" alt="기본 프로필 이미지" srcset="">
                         </div>
                         <div>
-                            <p class="m-0">wool</p>
-                            <p class="m-0">in charge</p>
+                            <p class="m-0">administrator</p>
+                            <p class="text-truncate m-0" style="max-width: 130px;">product manager, designer, front-end, back-end</p>
                         </div>
                     </div>
                 </a>
@@ -101,90 +101,121 @@
                     </td>
                 </tr>
                 <tr>
-                    <th class="dot">가격</th>
+                    <th class="dot">상품 이미지</th>
+                    <td>
+                        <label for="formFile" class="form-label">권장 파일 사이즈 : 300X300</label>
+                        <input class="form-control" type="file" id="formFile">
+                    </td>
+                </tr>
+                <tr>
+                    <th class="dot">브랜드</th>
                     <td>
                         <input class="form-control" type="text">
                     </td>
                 </tr>
+                <tr>
+                    <th class="dot">구매링크</th>
+                    <td>
+                        <input class="form-control" type="url">
+                    </td>
+                </tr>
+                <tr>
+                    <th class="dot">가격</th>
+                    <td>
+                        <input class="form-control" type="text" id="cost_input">
+                    </td>
+                </tr>
+                <tr>
+                    <th class="dot">종류</th>
+                    <td>
+                        <div class="form-floating row">
+                            <div class="col">
+                                <label for="floatingSelect01">1차 분류</label>
+                                <select class="form-select" id="floatingSelect01" aria-label="Floating label select example">
+                                <option selected>선택하세요.</option>
+                                <option value="1">홍차</option>
+                                <option value="2">녹차</option>
+                                <option value="3">우롱차</option>
+                                <option value="4">보이차</option>
+                                <option value="5">백차</option>
+                                <option value="6">블렌딩</option>
+                                <option value="7">콤부차</option>
+                                </select>
+                            </div>
+                            <div class="col">
+                                <label for="floatingSelect02">2차 분류</label>
+                                <select class="form-select" id="floatingSelect02" aria-label="Floating label select example">
+                                <option selected>선택하세요.</option>
+                                <option value="1">티백</option>
+                                <option value="2">잎차</option>
+                                <option value="3">액상차</option>
+                                <option value="4">RTD</option>
+                                <option value="5">파우더</option>
+                                </select>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="dot">효능</th>
+                    <td>
+                        <input type="checkbox" class="btn-check" id="tag-efficacy-01" autocomplete="off">
+                        <label class="btn" for="tag-efficacy-01">감기 예방</label>
+                        <input type="checkbox" class="btn-check" id="tag-efficacy-02" autocomplete="off">
+                        <label class="btn" for="tag-efficacy-02">근육피로</label>
+                        <input type="checkbox" class="btn-check" id="tag-efficacy-03" autocomplete="off">
+                        <label class="btn" for="tag-efficacy-03">숙취해소</label>
+                        <input type="checkbox" class="btn-check" id="tag-efficacy-04" autocomplete="off">
+                        <label class="btn" for="tag-efficacy-04">수면</label>
+                        <input type="checkbox" class="btn-check" id="tag-efficacy-05" autocomplete="off">
+                        <label class="btn" for="tag-efficacy-05">피부미용</label>
+                        <input type="checkbox" class="btn-check" id="tag-efficacy-06" autocomplete="off">
+                        <label class="btn" for="tag-efficacy-06">집중력</label>
+                        <input type="checkbox" class="btn-check" id="tag-efficacy-07" autocomplete="off">
+                        <label class="btn" for="tag-efficacy-07">위장건강</label>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="dot">테마</th>
+                    <td>
+                        <input type="checkbox" class="btn-check" id="tag-theme-01" autocomplete="off">
+                        <label class="btn" for="tag-theme-01">연휴 선물 추천</label>
+                        <input type="checkbox" class="btn-check" id="tag-theme-02" autocomplete="off">
+                        <label class="btn" for="tag-theme-02">특별한 날에</label>
+                        <input type="checkbox" class="btn-check" id="tag-theme-03" autocomplete="off">
+                        <label class="btn" for="tag-theme-03">칵테일 추천</label>
+                        <input type="checkbox" class="btn-check" id="tag-theme-04" autocomplete="off">
+                        <label class="btn" for="tag-theme-04">아이스티 추천</label>
+                        <input type="checkbox" class="btn-check" id="tag-theme-05" autocomplete="off">
+                        <label class="btn" for="tag-theme-05">크리스마스 추천</label>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="dot">금지사항</th>
+                    <td>
+                        <input type="checkbox" class="btn-check" id="btn-check-01" autocomplete="off">
+                        <label class="btn btn-outline-danger" for="btn-check-01">임산부 주의</label>
+                        <input type="checkbox" class="btn-check" id="btn-check-02" autocomplete="off">
+                        <label class="btn btn-outline-danger" for="btn-check-02">고혈압 환자 주의</label>
+                        <input type="checkbox" class="btn-check" id="btn-check-03" autocomplete="off">
+                        <label class="btn btn-outline-danger" for="btn-check-03">알러지 주의</label>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="dot">상품 상세 설명</th>
+                    <td>
+                        <textarea class="form-control" placeholder="상세 설명을 작성해주세요." id="floatingTextarea2" style="height: 100px"></textarea>
+                    </td>
+                </tr>
             </table>
+            <div class="d-grid mt-3">
+                <input class="btn btn-primary btn-lg" type="submit" value="Submit">
+            </div>
         </section>
-        <!-- 
-            <section>
-            <div class="row">
-                <div class="col">
-                    <h3>Overview</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id quos cumque, quisquam dolorum delectus cupiditate molestiae. Deleniti beatae blanditiis inventore ut dolores deserunt temporibus saepe. Reiciendis aliquam voluptates cum corrupti?</p>
-                </div>
-                <div class="col">
-                    <select name="" id="">
-                        <option value="1">2024-03</option>
-                        <option value="2">2024-04</option>
-                        <option value="3">2024-05</option>
-                        <option value="4">2024-06</option>
-                        <option value="5">2024-07</option>
-                    </select>
-                    <button type="button">Export</button>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <div class="row">
-                        <div class="col">
-                            <h4>title</h4>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias dolore fugiat officiis sapiente eligendi, similique eius ipsa suscipit facere? Earum hic et tenetur est veritatis quas, ad aspernatur provident unde?</p>
-                        </div>
-                        <div class="col">
-                            <ul class="row">
-                                <li class="col">All</li>
-                                <li class="col">1</li>
-                                <li class="col">2</li>
-                                <li class="col">3</li>
-                                <li class="col">4</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="row">
-                        graph
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="row">
-                        <div class="col">
-                            <h4>Your Portfolio</h4>
-                        </div>
-                        <div class="col">
-                            <button type="button">...</button>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <h3>12345</h3>
-                        </div>
-                        <div class="col">
-                            <p>lorem-</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="row">
-                            <div class="col">1</div>
-                            <div class="col">2</div>
-                        </div>
-                        <div class="row">
-                            <div class="col">3</div>
-                            <div class="col">4</div>
-                        </div>
-                        <div class="row">
-                            <div class="col">5</div>
-                            <div class="col">6</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section> 
-        -->
         <div class="lnb" style="display: none;" id="lnb">
             <ul>
-                <li><a href="">상품 데이터 등록/관리</a></li>
+                <li><a href="./admin_home.html">홈</a></li>
+                <li><a href="./admin_product_write.html">상품 데이터 등록/관리</a></li>
                 <li><a href="">회원 계정 관리</a></li>
                 <li><a href="">게시판 커뮤니티 등록/관리</a></li>
             </ul>
@@ -193,6 +224,7 @@
     <footer></footer>
 </body>
 <script>
+    // 햄버거 버튼 스크립트
     const lnb_hamburger_btn = document.querySelector('#hamburger-btn');
     const lnb = document.querySelector('#lnb');
 
@@ -200,8 +232,21 @@
         lnb.style.display = (lnb.style.display === 'none' || lnb.style.display === '') ? 'block' : 'none';
     })
 
-    lnb_hamburger_btn.addEventListener("blur", function() {
+    lnb.addEventListener("click", function() {
         lnb.style.display = (lnb.style.display === 'none' || lnb.style.display === '') ? 'block' : 'none';
+    })
+
+    // 가격 input 형식
+    const cost_input = document.querySelector('#cost_input');
+    cost_input.addEventListener('keyup', function(e) {
+    let value = e.target.value;
+    value = Number(value.replaceAll(',', ''));
+    if(isNaN(value)) {
+        cost_input.value = 0;
+    } else {
+        const formatValue = value.toLocaleString('ko-KR');
+        cost_input.value = formatValue;
+    }
     })
 </script>
 </html>

@@ -48,8 +48,8 @@
                             <img class="default-profile" src="./src/img/profile-default.svg" alt="기본 프로필 이미지" srcset="">
                         </div>
                         <div>
-                            <p class="m-0">wool</p>
-                            <p class="m-0">in charge</p>
+                            <p class="m-0">administrator</p>
+                            <p class="text-truncate m-0" style="max-width: 130px;">product manager, designer, front-end, back-end</p>
                         </div>
                     </div>
                 </a>
@@ -205,7 +205,8 @@
         -->
         <div class="lnb" style="display: none;" id="lnb">
             <ul>
-                <li><a href="">상품 데이터 등록/관리</a></li>
+                <li><a href="./admin_home.html">홈</a></li>
+                <li><a href="./admin_product_write.html">상품 데이터 등록/관리</a></li>
                 <li><a href="">회원 계정 관리</a></li>
                 <li><a href="">게시판 커뮤니티 등록/관리</a></li>
             </ul>
@@ -221,7 +222,7 @@
         lnb.style.display = (lnb.style.display === 'none' || lnb.style.display === '') ? 'block' : 'none';
     })
 
-    lnb_hamburger_btn.addEventListener("blur", function() {
+    lnb.addEventListener("mouseout", function() {
         lnb.style.display = (lnb.style.display === 'none' || lnb.style.display === '') ? 'block' : 'none';
     })
 </script>
