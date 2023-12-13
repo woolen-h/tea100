@@ -60,32 +60,14 @@
         <section>
             <div class="row">
                 <div class="col-3">
-                    <h3>상품 데이터 등록</h3>
-                    <p class="description">상품 데이터 등록하는 페이지입니다.</p>
+                    <h3>상품 데이터 편집</h3>
+                    <p class="description">등록된 데이터를 편집/삭제하는 페이지입니다.</p>
                 </div>
             </div>
         </section>
-        <!-- <section class="menu-bar num01">
-            <div class="row">
-                <div class="col">
-                    <ul class="d-flex gap-3 p-0 m-0">
-                        <li><a href="">menu01</a></li>
-                        <li><a href="">menu02</a></li>
-                        <li><a href="">menu03</a></li>
-                        <li><a href="">menu04</a></li>
-                    </ul>
-                </div>
-                <div class="col">
-                    <ul class="d-flex justify-content-end gap-3 m-0">
-                        <li><a href="">Todo</a></li>
-                        <li><a href="">Settings</a></li>
-                    </ul>
-                </div>
-            </div>
-        </section> -->
         <section class="menu-bar num02">
             <ul class="d-flex justify-content-between m-0 p-0">
-                <li class="menu-detail">기본 정보</li>
+                <li class="menu-detail">상세 편집</li>
             </ul>
         </section>
         <section class="p-3" style="background-color: #fff;">
@@ -97,7 +79,7 @@
                 <tr>
                     <th class="dot">상품명</th>
                     <td>
-                        <input class="form-control" type="text">
+                        <input class="form-control" type="text" value="달빛걷기">
                     </td>
                 </tr>
                 <tr>
@@ -110,19 +92,19 @@
                 <tr>
                     <th class="dot">브랜드</th>
                     <td>
-                        <input class="form-control" type="text">
+                        <input class="form-control" type="text" value="오설록">
                     </td>
                 </tr>
                 <tr>
                     <th class="dot">구매링크</th>
                     <td>
-                        <input class="form-control" type="url">
+                        <input class="form-control" type="url" value="https://www.osulloc.com/kr/ko/shop/item/teashop/16968">
                     </td>
                 </tr>
                 <tr>
                     <th class="dot">가격</th>
                     <td>
-                        <input class="form-control" type="text" id="cost_input">
+                        <input class="form-control" type="text" id="cost_input" value="15,000">
                     </td>
                 </tr>
                 <tr>
@@ -133,7 +115,7 @@
                                 <label for="floatingSelect01">1차 분류</label>
                                 <select class="form-select" id="floatingSelect01" aria-label="Floating label select example">
                                 <option selected>선택하세요.</option>
-                                <option value="1">홍차</option>
+                                <option value="1" selected>홍차</option>
                                 <option value="2">녹차</option>
                                 <option value="3">우롱차</option>
                                 <option value="4">보이차</option>
@@ -146,7 +128,7 @@
                                 <label for="floatingSelect02">2차 분류</label>
                                 <select class="form-select" id="floatingSelect02" aria-label="Floating label select example">
                                 <option selected>선택하세요.</option>
-                                <option value="1">티백</option>
+                                <option value="1" selected>티백</option>
                                 <option value="2">잎차</option>
                                 <option value="3">액상차</option>
                                 <option value="4">RTD</option>
@@ -159,11 +141,11 @@
                 <tr>
                     <th class="dot">효능</th>
                     <td>
-                        <input type="checkbox" class="btn-check" id="tag-efficacy-01" autocomplete="off">
+                        <input type="checkbox" class="btn-check" id="tag-efficacy-01" autocomplete="off" checked>
                         <label class="btn" for="tag-efficacy-01">감기 예방</label>
                         <input type="checkbox" class="btn-check" id="tag-efficacy-02" autocomplete="off">
                         <label class="btn" for="tag-efficacy-02">근육피로</label>
-                        <input type="checkbox" class="btn-check" id="tag-efficacy-03" autocomplete="off">
+                        <input type="checkbox" class="btn-check" id="tag-efficacy-03" autocomplete="off" checked>
                         <label class="btn" for="tag-efficacy-03">숙취해소</label>
                         <input type="checkbox" class="btn-check" id="tag-efficacy-04" autocomplete="off">
                         <label class="btn" for="tag-efficacy-04">수면</label>
@@ -171,14 +153,14 @@
                         <label class="btn" for="tag-efficacy-05">피부미용</label>
                         <input type="checkbox" class="btn-check" id="tag-efficacy-06" autocomplete="off">
                         <label class="btn" for="tag-efficacy-06">집중력</label>
-                        <input type="checkbox" class="btn-check" id="tag-efficacy-07" autocomplete="off">
+                        <input type="checkbox" class="btn-check" id="tag-efficacy-07" autocomplete="off" checked>
                         <label class="btn" for="tag-efficacy-07">위장건강</label>
                     </td>
                 </tr>
                 <tr>
                     <th class="dot">테마</th>
                     <td>
-                        <input type="checkbox" class="btn-check" id="tag-theme-01" autocomplete="off">
+                        <input type="checkbox" class="btn-check" id="tag-theme-01" autocomplete="off" checked>
                         <label class="btn" for="tag-theme-01">연휴 선물 추천</label>
                         <input type="checkbox" class="btn-check" id="tag-theme-02" autocomplete="off">
                         <label class="btn" for="tag-theme-02">특별한 날에</label>
@@ -186,14 +168,14 @@
                         <label class="btn" for="tag-theme-03">칵테일 추천</label>
                         <input type="checkbox" class="btn-check" id="tag-theme-04" autocomplete="off">
                         <label class="btn" for="tag-theme-04">아이스티 추천</label>
-                        <input type="checkbox" class="btn-check" id="tag-theme-05" autocomplete="off">
+                        <input type="checkbox" class="btn-check" id="tag-theme-05" autocomplete="off" checked>
                         <label class="btn" for="tag-theme-05">크리스마스 추천</label>
                     </td>
                 </tr>
                 <tr>
                     <th class="dot">금지사항</th>
                     <td>
-                        <input type="checkbox" class="btn-check" id="btn-check-01" autocomplete="off">
+                        <input type="checkbox" class="btn-check" id="btn-check-01" autocomplete="off" checked>
                         <label class="btn btn-outline-danger" for="btn-check-01">임산부 주의</label>
                         <input type="checkbox" class="btn-check" id="btn-check-02" autocomplete="off">
                         <label class="btn btn-outline-danger" for="btn-check-02">고혈압 환자 주의</label>
@@ -204,12 +186,12 @@
                 <tr>
                     <th class="dot">상품 상세 설명</th>
                     <td>
-                        <textarea class="form-control" placeholder="상세 설명을 작성해주세요." id="floatingTextarea2" style="height: 100px"></textarea>
+                        <textarea class="form-control" placeholder="상세 설명을 작성해주세요." id="floatingTextarea2" style="height: 100px">달큰한 배향이 달빛처럼 은은하게 감도는 후발효차</textarea>
                     </td>
                 </tr>
             </table>
             <div class="d-grid mt-3">
-                <input class="btn btn-primary btn-lg" type="submit" value="등록">
+                <input class="btn btn-primary btn-lg" type="submit" value="수정">
             </div>
         </section>
         <div class="lnb" style="display: none;" id="lnb">
@@ -225,7 +207,6 @@
     <footer></footer>
 </body>
 <script>
-    // 햄버거 버튼 스크립트
     const lnb_hamburger_btn = document.querySelector('#hamburger-btn');
     const lnb = document.querySelector('#lnb');
 
@@ -233,21 +214,8 @@
         lnb.style.display = (lnb.style.display === 'none' || lnb.style.display === '') ? 'block' : 'none';
     })
 
-    lnb.addEventListener("click", function() {
+    lnb.addEventListener("mouseout", function() {
         lnb.style.display = (lnb.style.display === 'none' || lnb.style.display === '') ? 'block' : 'none';
-    })
-
-    // 가격 input 형식
-    const cost_input = document.querySelector('#cost_input');
-    cost_input.addEventListener('keyup', function(e) {
-    let value = e.target.value;
-    value = Number(value.replaceAll(',', ''));
-    if(isNaN(value)) {
-        cost_input.value = 0;
-    } else {
-        const formatValue = value.toLocaleString('ko-KR');
-        cost_input.value = formatValue;
-    }
     })
 </script>
 </html>
