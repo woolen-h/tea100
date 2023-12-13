@@ -6,11 +6,16 @@ $theme-05-hex: #F8F9F8;
 $theme-06-hex: #C9B6A1;
 $white: #fff;
 $black: #333;
-$black-01: rgba(#333, .1);
-$black-02: rgba(#333, .2);
-$black-03: rgba(#333, .3);
-$black-04: rgba(#333, .4);
-$black-05: rgba(#333, .5);
+$black-01: #444;
+$black-02: #555;
+$black-03: #666;
+$black-04: #777;
+$black-05: #888;
+$black-06: #999;
+$black-07: #aaa;
+$black-08: #bbb;
+$black-09: #ccc;
+$black-10: #ddd;
 $accent-01: #7DB2FF;
 $accent-02: #FF7D7E;
 $accent-03: #CFFF66;
@@ -141,24 +146,15 @@ header {
 
 // table
 table {
-    border-collapse: collapse;
-    width: 100%;
-    border-radius: .5rem;
-    overflow: hidden;
     tr {
         th, td {padding: .5rem 1rem;}
         th {
-            background-color: $black-01;
-            border: 1px solid $black-02;
+            position: relative;
+            background-color: rgba($black-01, .1) !important;
+            border: 1px solid $black-09;
         }
         td {
-            border: 1px solid $black-02;
-            border-radius: .5rem;
-        }
-        &:last-child {
-            th {
-                border-bottom-color: $black-03;
-            }
+            border: 1px solid $black-09;
         }
     }
 }
