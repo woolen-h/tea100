@@ -28,9 +28,10 @@
           },
           h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
         })(document);
-      </script>
+    </script>
     <!-- // [font] import - Adobe -->
-
+    <!-- Editor's Style -->
+  <link rel="stylesheet" href="https://uicdn.toast.com/editor/latest/toastui-editor.min.css" />
 </head>
 <body class="container">
     <header class="mb-5">
@@ -60,117 +61,55 @@
         <section>
             <div class="row">
                 <div class="col-3">
-                    <h3>상품 데이터 관리</h3>
-                    <p class="description">등록된 데이터를 편집/삭제하는 페이지입니다.</p>
+                    <h3>커뮤니티 게시판 등록</h3>
+                    <p class="description">게시판 글 작성용 페이지입니다.</p>
                 </div>
             </div>
         </section>
+        <!-- <section class="menu-bar num01">
+            <div class="row">
+                <div class="col">
+                    <ul class="d-flex gap-3 p-0 m-0">
+                        <li><a href="">menu01</a></li>
+                        <li><a href="">menu02</a></li>
+                        <li><a href="">menu03</a></li>
+                        <li><a href="">menu04</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <ul class="d-flex justify-content-end gap-3 m-0">
+                        <li><a href="">Todo</a></li>
+                        <li><a href="">Settings</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section> -->
         <section class="menu-bar num02">
             <ul class="d-flex justify-content-between m-0 p-0">
-                <li class="menu-detail">데이터베이스</li>
+                <li class="menu-detail">기본 내용</li>
             </ul>
         </section>
         <section class="p-3" style="background-color: #fff;">
-            <table class="table table-hover">
+            <table class="table">
                 <colgroup>
-                    <col style="">
+                    <col style="width: 15%;">  
+                    <col style="width: 85%;">  
                 </colgroup>
                 <tr>
-                    <th>상품명</th>
-                    <th>브랜드</th>
-                    <th>가격</th>
-                    <th>종류</th>
-                    <th>구매 링크</th>
+                    <th class="dot">제목</th>
+                    <td>
+                        <input class="form-control" type="text">
+                    </td>
                 </tr>
                 <tr>
-                    <td><a href="./admin_product_manage_detail.html">달빛걷기</a></td>
-                    <td><a href="./admin_product_manage_detail.html">오설록</a></td>
-                    <td><a href="./admin_product_manage_detail.html">15,000</a></td>
-                    <td><a href="./admin_product_manage_detail.html">후발효차</a></td>
-                    <td><a href="https://www.osulloc.com/kr/ko/shop/item/teashop/16968">https://www.osulloc.com/kr/ko/shop/item/teashop/16968</a></td>
-                </tr>
-                <tr>
-                    <td>dummy</td>
-                    <td>dummy</td>
-                    <td>dummy</td>
-                    <td>dummy</td>
-                    <td>dummy</td>
-                </tr>
-                <tr>
-                    <td>dummy</td>
-                    <td>dummy</td>
-                    <td>dummy</td>
-                    <td>dummy</td>
-                    <td>dummy</td>
-                </tr>
-                <tr>
-                    <td>dummy</td>
-                    <td>dummy</td>
-                    <td>dummy</td>
-                    <td>dummy</td>
-                    <td>dummy</td>
-                </tr>
-                <tr>
-                    <td>dummy</td>
-                    <td>dummy</td>
-                    <td>dummy</td>
-                    <td>dummy</td>
-                    <td>dummy</td>
-                </tr>
-                <tr>
-                    <td>dummy</td>
-                    <td>dummy</td>
-                    <td>dummy</td>
-                    <td>dummy</td>
-                    <td>dummy</td>
-                </tr>
-                <tr>
-                    <td>dummy</td>
-                    <td>dummy</td>
-                    <td>dummy</td>
-                    <td>dummy</td>
-                    <td>dummy</td>
-                </tr>
-                <tr>
-                    <td>dummy</td>
-                    <td>dummy</td>
-                    <td>dummy</td>
-                    <td>dummy</td>
-                    <td>dummy</td>
-                </tr>
-                <tr>
-                    <td>dummy</td>
-                    <td>dummy</td>
-                    <td>dummy</td>
-                    <td>dummy</td>
-                    <td>dummy</td>
-                </tr>
-                <tr>
-                    <td>dummy</td>
-                    <td>dummy</td>
-                    <td>dummy</td>
-                    <td>dummy</td>
-                    <td>dummy</td>
+                    <th class="dot">내용</th>
+                    <td>
+                        <div id="editor"></div>
+                    </td>
                 </tr>
             </table>
-            <div class="d-flex justify-content-center mt-3">
-                <nav aria-label="Page navigation example">
-                    <ul class="pagination m-0">
-                      <li class="page-item">
-                        <a class="page-link" href="#" aria-label="Previous">
-                          <span aria-hidden="true">&laquo;</span>
-                        </a>
-                      </li>
-                      <li class="page-item"><a class="page-link" href="#">1</a></li>
-                      <li class="page-item"><a class="page-link" href="#">2</a></li>
-                      <li class="page-item"><a class="page-link" href="#">3</a></li>
-                      <li class="page-item">
-                        <a class="page-link" href="#" aria-label="Next">
-                          <span aria-hidden="true">&raquo;</span>
-                        </a>
-                      </li>
-                    </ul>
-                </nav>
+            <div class="d-grid mt-3">
+                <input class="btn btn-primary btn-lg" type="submit" value="등록">
             </div>
         </section>
         <div class="lnb" style="display: none;" id="lnb">
@@ -186,7 +125,9 @@
     </main>
     <footer></footer>
 </body>
+<script src="https://uicdn.toast.com/editor/latest/toastui-editor-all.min.js"></script>
 <script>
+    // 햄버거 버튼 스크립트
     const lnb_hamburger_btn = document.querySelector('#hamburger-btn');
     const lnb = document.querySelector('#lnb');
 
@@ -194,8 +135,28 @@
         lnb.style.display = (lnb.style.display === 'none' || lnb.style.display === '') ? 'block' : 'none';
     })
 
-    lnb.addEventListener("mouseout", function() {
+    lnb.addEventListener("click", function() {
         lnb.style.display = (lnb.style.display === 'none' || lnb.style.display === '') ? 'block' : 'none';
     })
+
+    // 가격 input 형식
+    const cost_input = document.querySelector('#cost_input');
+    cost_input.addEventListener('keyup', function(e) {
+    let value = e.target.value;
+    value = Number(value.replaceAll(',', ''));
+    if(isNaN(value)) {
+        cost_input.value = 0;
+    } else {
+        const formatValue = value.toLocaleString('ko-KR');
+        cost_input.value = formatValue;
+    }
+    })
+
+    const editor = new Editor({
+  el: document.querySelector('#editor'),
+  height: '600px',
+  initialEditType: 'markdown',
+  previewStyle: 'vertical'
+});
 </script>
 </html>

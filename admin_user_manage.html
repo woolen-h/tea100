@@ -60,14 +60,32 @@
         <section>
             <div class="row">
                 <div class="col-3">
-                    <h3>상품 데이터 관리</h3>
-                    <p class="description">등록된 데이터를 편집/삭제하는 페이지입니다.</p>
+                    <h3>회원 계정 관리</h3>
+                    <p class="description">사용자 계정 관리용 페이지입니다.</p>
                 </div>
             </div>
         </section>
+        <!-- <section class="menu-bar num01">
+            <div class="row">
+                <div class="col">
+                    <ul class="d-flex gap-3 p-0 m-0">
+                        <li><a href="">menu01</a></li>
+                        <li><a href="">menu02</a></li>
+                        <li><a href="">menu03</a></li>
+                        <li><a href="">menu04</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <ul class="d-flex justify-content-end gap-3 m-0">
+                        <li><a href="">Todo</a></li>
+                        <li><a href="">Settings</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section> -->
         <section class="menu-bar num02">
             <ul class="d-flex justify-content-between m-0 p-0">
-                <li class="menu-detail">데이터베이스</li>
+                <li class="menu-detail">전체 사용자 <span class="accent">000</span>명</li>
             </ul>
         </section>
         <section class="p-3" style="background-color: #fff;">
@@ -76,18 +94,18 @@
                     <col style="">
                 </colgroup>
                 <tr>
-                    <th>상품명</th>
-                    <th>브랜드</th>
-                    <th>가격</th>
-                    <th>종류</th>
-                    <th>구매 링크</th>
+                    <th>닉네임</th>
+                    <th>계정</th>
+                    <th>그룹</th>
+                    <th>글</th>
+                    <th>메모</th>
                 </tr>
                 <tr>
-                    <td><a href="./admin_product_manage_detail.html">달빛걷기</a></td>
-                    <td><a href="./admin_product_manage_detail.html">오설록</a></td>
-                    <td><a href="./admin_product_manage_detail.html">15,000</a></td>
-                    <td><a href="./admin_product_manage_detail.html">후발효차</a></td>
-                    <td><a href="https://www.osulloc.com/kr/ko/shop/item/teashop/16968">https://www.osulloc.com/kr/ko/shop/item/teashop/16968</a></td>
+                    <td><a href="./admin_user_manage_detail.html">홍길동</a></td>
+                    <td><a href="./admin_user_manage_detail.html">anonymous@tea100.co.kr</a></td>
+                    <td><a href="./admin_user_manage_detail.html">관리자</a></td>
+                    <td><a href="./admin_user_manage_detail.html"><span>000</span>개</a></td>
+                    <td><a href="./admin_user_manage_detail.html">-</a></td>
                 </tr>
                 <tr>
                     <td>dummy</td>
@@ -187,6 +205,7 @@
     <footer></footer>
 </body>
 <script>
+    // 햄버거 버튼 스크립트
     const lnb_hamburger_btn = document.querySelector('#hamburger-btn');
     const lnb = document.querySelector('#lnb');
 
@@ -194,8 +213,21 @@
         lnb.style.display = (lnb.style.display === 'none' || lnb.style.display === '') ? 'block' : 'none';
     })
 
-    lnb.addEventListener("mouseout", function() {
+    lnb.addEventListener("click", function() {
         lnb.style.display = (lnb.style.display === 'none' || lnb.style.display === '') ? 'block' : 'none';
+    })
+
+    // 가격 input 형식
+    const cost_input = document.querySelector('#cost_input');
+    cost_input.addEventListener('keyup', function(e) {
+    let value = e.target.value;
+    value = Number(value.replaceAll(',', ''));
+    if(isNaN(value)) {
+        cost_input.value = 0;
+    } else {
+        const formatValue = value.toLocaleString('ko-KR');
+        cost_input.value = formatValue;
+    }
     })
 </script>
 </html>

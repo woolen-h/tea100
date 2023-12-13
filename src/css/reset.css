@@ -31,7 +31,10 @@ q:before, q:after {
 	content: none;
 }
 table {border-collapse: collapse; border-spacing: 0;}
-a {color: inherit !important;}
+a {
+	color: inherit !important;
+	text-decoration: none !important;
+}
 
 /* input 포커스 하이라이트 삭제 */
 input:focus {outline: none;}
