@@ -1,0 +1,11 @@
+{
+  "devDependencies": {
+    "gh-pages": "^6.1.0"
+  },
+  "homepage": "https://woolen-h.github.io/tea-100-admin",
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "build": "webpack"
+  }
+}
