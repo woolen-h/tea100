@@ -119,4 +119,62 @@ table tr th {
 }
 table tr td {
   border: 1px solid #ccc;
+}
+table tr td label.btn {
+  margin: 5px;
+}
+
+.btn.btn-color-01 {
+  border: 1px solid #758650;
+  color: #758650;
+}
+.btn.btn-color-01:hover {
+  background-color: rgba(117, 134, 80, 0.3) !important;
+  color: #758650 !important;
+}
+.btn.btn-color-02 {
+  border: 1px solid #B5C267;
+  color: #B5C267;
+}
+.btn.btn-color-02:hover {
+  background-color: rgba(181, 194, 103, 0.3) !important;
+  color: #B5C267 !important;
+}
+.btn.btn-color-03 {
+  border: 1px solid #E8B634;
+  color: #E8B634 !important;
+}
+.btn.btn-color-03:hover {
+  background-color: rgba(232, 182, 52, 0.3) !important;
+}
+.btn.btn-color-04 {
+  border: 1px solid #C9B6A1;
+  color: #C9B6A1 !important;
+}
+.btn.btn-color-04:hover {
+  background-color: rgba(201, 182, 161, 0.3) !important;
+}
+
+.btn-check:checked + .btn-color-01 {
+  background-color: #758650 !important;
+  border-color: #758650 !important;
+  color: #fff !important;
+}
+
+.btn-check:checked + .btn-color-02 {
+  background-color: #B5C267 !important;
+  border-color: #B5C267 !important;
+  color: #fff !important;
+}
+
+.btn-check:checked + .btn-color-03 {
+  background-color: #E8B634 !important;
+  border-color: #E8B634 !important;
+  color: #fff !important;
+}
+
+.btn-check:checked + .btn-color-04 {
+  background-color: #C9B6A1 !important;
+  border-color: #C9B6A1 !important;
+  color: #fff !important;
 }/*# sourceMappingURL=style.css.map */
